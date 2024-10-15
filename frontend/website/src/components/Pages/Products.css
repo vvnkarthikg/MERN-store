@@ -1,0 +1,141 @@
+/* Global Styles */
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0; /* Remove default body margin */
+}
+
+/* Home Container */
+.home-container {
+    max-width: 1400px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 5%; /* Add horizontal padding */
+    padding-top: 0rem;
+    width: 100%; /* Ensure it takes full width */
+}
+
+/* Banner Section */
+.banner-image {
+    width: 100vw; /* Full width of the viewport */
+    margin:  0; /* Remove any default margins */
+    padding: 0; /* Remove padding */
+    display: flex; /* Center the image inside */
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* You can adjust the height as needed */
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.banner-image img {
+    width: 100%; /* Make the image take up the entire container width */
+    height: 100%; /* Make the image take up the entire container height */
+    object-fit: cover; /* Cover the container without distorting the image */
+}/* Product List */
+.prod-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px; /* Add space above the product list */
+}
+
+/* Product Card Styles */
+/* ... (rest of your styles remain unchanged) ... */
+
+/* Media Queries for Responsiveness */
+/* ... (your media queries remain unchanged) ... */
+.prod-card {
+    border: 1px solid rgb(207, 207, 223);
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    overflow: hidden; /* Ensures no overflow from child elements */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.prod-card:hover {
+    transform: scale(1.05);
+}
+
+/* Product Image Styles */
+.prod-image {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Allow height to adjust automatically */
+    max-height: 150px; /* Set a maximum height for uniformity */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.prod-image img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+}
+
+/* Product Details Styles */
+.prod-details {
+    padding: 10px; /* Reduced padding for less height */
+}
+
+.prod-details h3 {
+    margin: 0 0 5px; /* Reduced margin for less height */
+    color: black;
+    font-size: 1.4em;
+    padding: 0 1rem;
+}
+
+.prod-price {
+    font-weight: 400;
+    font-size: 1.2em;
+    color: black;
+    padding-left: 1rem;
+}
+
+.prod-quantity {
+    color: black;
+    font-weight: 400;
+    padding-left: 1rem;
+}
+
+/* Error Text Styles */
+.error-text {
+    color: red;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+   .home-container {
+       padding-left: 5%; 
+       padding-right: 5%; 
+   }
+
+   .prod-list {
+       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column size for smaller screens */
+   }
+
+   .prod-card {
+       margin-bottom: 20px; /* Add space between cards in vertical layout */
+   }
+
+   .banner-image {
+       height: auto; /* Allow height to adjust automatically on smaller screens */
+   }
+}
+
+/* For mobile devices (smaller than tablets) */
+@media (max-width: 480px) {
+   .prod-details h3 {
+       font-size: 1.2em; /* Smaller heading size on mobile */
+   }
+
+   .prod-price,
+   .prod-quantity {
+       font-size: 1em; /* Smaller text size on mobile */
+       padding-left: .5rem; /* Adjust padding for mobile */
+   }
+
+   .banner-image {
+       max-height: 200px; /* Reduce max height for smaller screens */
+   }
+}

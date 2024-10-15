@@ -1,0 +1,101 @@
+/* ProductDetails.css */
+
+
+
+.product-details {
+    background-color:#efeff7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    margin: 0;
+    padding : 20px;
+    background-color: f9f9f9;
+    min-height: 100vh; /* Ensure the section takes full height */
+}
+
+.product-layout {
+    display: flex;
+    flex-direction: row; /* Side by side layout */
+    width: 100%; /* Use full width */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0; /* Remove margin to eliminate spacing on the sides */
+    padding: 0; /* Remove padding if any */
+}
+
+.product-image {
+    width: 50%; /* Image occupies 50% of the layout */
+    height: auto; /* Allow height to adjust automatically */
+    object-fit: contain; /* Maintain aspect ratio without cropping */
+    border: 1px solid #cccccc00; /* Border thickness and color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+    margin: 0; /* Remove any margin */
+    margin-right: 20px;
+}
+
+.product-image:hover{
+ transform: scale(1.05);   
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align to the top */
+    width: 50%; /* Info occupies the remaining 50% */
+}
+
+.product-name {
+    font-size: 32px; /* Larger font size for product name */
+    font-weight: bolder; /* Bold font for the product name */
+    margin: 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 24px; /* Price font size */
+    margin: 10px 0;
+    color: #1b1a1a; /* Amazon price color */
+    font-weight: normal;
+}
+
+.product-quantity,
+.product-category {
+    font-size: 16px; /* Font size for quantity and category */
+    margin: 5px 0;
+}
+
+.add-to-cart,
+.buy-now {
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #076dad; /* Amazon button color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover,
+.buy-now:hover {
+    background-color: #064268; /* Darker shade on hover */
+}
+
+.product-description {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.loading {
+    font-size: 20px;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
